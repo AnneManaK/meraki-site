@@ -1,0 +1,35 @@
+---
+import { billetwebUrl } from '../data/sessions.js';
+---
+
+<section class="mt-8">
+  <div
+    class="rounded-3xl p-10 md:p-14 text-center relative overflow-hidden"
+    style="background: linear-gradient(180deg, rgba(255,255,255,0.97) 0%, rgba(207,187,153,0.97) 100%); color: #111; box-shadow: 0 14px 36px rgba(0,0,0,0.24);"
+  >
+    <div class="absolute -top-20 -right-20 w-64 h-64 rounded-full blur-3xl opacity-20" style="background: #0c557e;">
+    </div>
+    <div class="relative z-10 flex flex-col items-center gap-5 max-w-2xl mx-auto">
+      <span class="text-xs uppercase tracking-widest font-semibold" style="color: rgba(17,17,17,0.5);">
+        Le premier pas
+      </span>
+      <h2 class="text-2xl md:text-4xl tracking-tight" style="font-family: 'Playfair Display', serif;">
+        Ce n'est pas de tout comprendre. C'est de sentir si cet espace t'appelle.
+      </h2>
+      <p class="text-sm font-light leading-relaxed" style="color: rgba(17,17,17,0.7);">
+        Si tu sens que quelque chose en toi a besoin de ralentir, de respirer, de se déposer et d'ouvrir un nouveau
+        possible, alors MERAKI est peut-être le bon endroit, au bon moment.
+      </p>
+      <a
+        class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl text-xs font-medium tracking-wide uppercase transition-all hover:opacity-90 mt-2"
+        style="background: #0c557e; color: #fff; box-shadow: 0 10px 24px rgba(0,0,0,0.18);"
+        href={billetwebUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Je réserve ma place
+        <iconify-icon icon="solar:arrow-right-linear" width="16" stroke-width="1.5"></iconify-icon>
+      </a>
+    </div>
+  </div>
+</section>

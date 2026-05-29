@@ -1,0 +1,70 @@
+---
+import { billetwebUrl } from '../data/sessions.js';
+---
+
+<nav
+  class="glass-nav fixed top-0 left-0 right-0 z-50 border-b border-white/10"
+  style="background: #ffffff; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);"
+>
+  <div class="flex h-16 max-w-5xl mr-auto ml-auto pr-6 pl-6 items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div
+        class="w-10 h-10 rounded-full overflow-hidden border flex-shrink-0 border-white/20"
+        style="background: rgba(255,255,255,0.08);"
+      >
+        <img
+          src="/logo.png"
+          alt="Logo MERAKI"
+          class="w-full h-full object-cover"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <div
+          class="hidden items-center justify-center w-full h-full text-xs tracking-widest"
+          style="font-family: 'Playfair Display', serif; color: #0c557e; display: flex;"
+        >
+        </div>
+      </div>
+      <span class="text-2xl font-medium tracking-tight" style="font-family: 'Playfair Display', serif; color: #0c557e">
+        MERAKI
+      </span>
+    </div>
+    <div class="hidden md:flex items-center gap-8">
+      <a
+        href="#infos"
+        class="text-xs font-medium tracking-wide uppercase transition-colors"
+        style="color:#0c557e;"
+        onmouseover="this.style.color='#083d5b'"
+        onmouseout="this.style.color='#0c557e'"
+      >
+        Infos
+      </a>
+      <a
+        href="#faq"
+        class="text-xs font-medium tracking-wide uppercase transition-colors"
+        style="color: #0c557e;"
+        onmouseover="this.style.color='#083d5b'"
+        onmouseout="this.style.color='#0c557e'"
+      >
+        FAQ
+      </a>
+      <a
+        class="text-xs font-medium tracking-wide uppercase px-5 py-2.5 rounded-full transition-all hover:opacity-90"
+        style="background: #0c557e; color: #fff;"
+        href={billetwebUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Réserver
+      </a>
+    </div>
+    <a
+      class="md:hidden text-xs font-medium tracking-wide uppercase px-4 py-2 rounded-full"
+      style="background: #0c557e; color: #fff;"
+      href={billetwebUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Réserver
+    </a>
+  </div>
+</nav>

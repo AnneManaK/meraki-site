@@ -1,0 +1,58 @@
+---
+---
+
+<section>
+  <div class="mb-8">
+    <span class="text-xs uppercase tracking-widest font-semibold block mb-2" style="color: #cfbb99;">
+      L'expérience
+    </span>
+    <h2 class="text-3xl md:text-4xl tracking-tight" style="font-family: 'Playfair Display', serif;">
+      Quatre jours où tu n'as rien à prouver
+    </h2>
+    <p class="text-sm font-light leading-relaxed mt-3 max-w-2xl" style="color: #e9dcc8;">
+      Pas de programme rigide. Pas de "il faut". Juste un espace bienveillant où ton corps, ton coeur et ton esprit
+      peuvent enfin se poser, respirer, explorer et se réorganiser autrement.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+    {[
+      {
+        icon: 'solar:body-linear',
+        titre: 'Revenir au corps',
+        texte: 'Des temps pour ralentir, ressentir, relâcher les tensions et retrouver de la présence.',
+      },
+      {
+        icon: 'solar:heart-linear',
+        titre: 'Ouvrir un espace intérieur',
+        texte: "Des explorations sensibles et émotionnelles pour laisser émerger ce qui demande à être vu.",
+      },
+      {
+        icon: 'solar:star-linear',
+        titre: 'Repartir plus clair',
+        texte: "Des prises de conscience, des repères simples et un nouvel élan pour revenir dans ta vie autrement.",
+      },
+    ].map(({ icon, titre, texte }) => (
+      <div
+        class="rounded-2xl p-6 border group transition-colors border-white/10 hover:border-white/20"
+        style="background: rgba(255,255,255,0.05); box-shadow: 0 8px 24px rgba(0,0,0,0.12);"
+      >
+        <div
+          class="w-10 h-10 rounded-full flex items-center justify-center mb-4 transition-colors"
+          style="background: rgba(207,187,153,0.12);"
+        >
+          <iconify-icon icon={icon} width="20" style="color: #cfbb99;" stroke-width="1.5"></iconify-icon>
+        </div>
+        <h3 class="text-base font-medium mb-2" style="font-family: 'Playfair Display', serif;">{titre}</h3>
+        <p class="text-sm font-light leading-relaxed" style="color: #e9dcc8;">{texte}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="rounded-2xl p-6 mt-5 border border-white/10" style="background: rgba(207,187,153,0.06);">
+    <p class="text-base font-light italic leading-relaxed" style="font-family: 'Playfair Display', serif; color: #e9dcc8;">
+      « On reste nature, car pour nous, transmettre notre spiritualité, c'est simplement agir en conscience,
+      (re)découvrir ses ressources pour les utiliser au quotidien, et vivre une vie en harmonie avec soi et les autres. »
+    </p>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'MERAKI',
+  description = 'MERAKI est une immersion de 4 jours et 3 nuits en Mayenne pour ralentir, ressentir, retrouver de la clarté et ouvrir un nouvel espace dans sa vie.',
+} = Astro.props;
+---
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <script src="https://cdn.tailwindcss.com" is:inline></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" is:inline></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: #f5f0ea; }
+      ::-webkit-scrollbar-thumb { background: #c4b49a; border-radius: 10px; }
+      .glass-nav { background: rgba(0, 0, 0, 0.92); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+      .modal { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; z-index: 200; }
+      .modal[aria-hidden="false"] { display: flex; }
+      .video-card { cursor: pointer; text-align: left; }
+    </style>
+  </head>
+  <body
+    style="font-family: 'Inter', sans-serif; background: linear-gradient(180deg, #0c557e 0%, #083d5b 100%); color: #ffffff; -webkit-font-smoothing: antialiased;"
+  >
+    <slot />
+  </body>
+</html>

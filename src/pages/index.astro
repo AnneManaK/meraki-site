@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import PourQui from '../components/PourQui.astro';
+import Experience from '../components/Experience.astro';
+import LeDuo from '../components/LeDuo.astro';
+import Programme from '../components/Programme.astro';
+import InfosPratiques from '../components/InfosPratiques.astro';
+import Temoignages from '../components/Temoignages.astro';
+import Pricing from '../components/Pricing.astro';
+import FAQ from '../components/FAQ.astro';
+import FinalCTA from '../components/FinalCTA.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout>
+  <Nav />
+
+  <main class="max-w-5xl mx-auto pt-24 pb-24 px-6 md:px-10 flex flex-col gap-16">
+    <Hero />
+    <PourQui />
+
+    <!-- Divider -->
+    <div class="flex items-center gap-4">
+      <div class="h-px flex-1" style="background: rgba(255,255,255,0.1);"></div>
+      <span class="italic text-lg" style="font-family: 'Playfair Display', serif; color: rgba(233,220,200,0.4);">
+        L'expérience
+      </span>
+      <div class="h-px flex-1" style="background: rgba(255,255,255,0.1);"></div>
+    </div>
+
+    <Experience />
+    <LeDuo />
+
+    <!-- Divider -->
+    <div class="flex items-center gap-4">
+      <div class="h-px flex-1" style="background: rgba(255,255,255,0.1);"></div>
+      <span class="italic text-lg" style="font-family: 'Playfair Display', serif; color: rgba(233,220,200,0.4);">
+        Le parcours
+      </span>
+      <div class="h-px flex-1" style="background: rgba(255,255,255,0.1);"></div>
+    </div>
+
+    <Programme />
+    <InfosPratiques />
+    <Temoignages />
+    <Pricing />
+    <FAQ />
+    <FinalCTA />
+  </main>
+
+  <Footer />
+</BaseLayout>

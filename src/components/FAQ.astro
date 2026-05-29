@@ -1,0 +1,57 @@
+---
+const questions = [
+  {
+    q: "Faut-il déjà avoir fait un travail sur soi ?",
+    r: "Non. Tu n'as pas besoin d'avoir un \"niveau\". Ce qui compte, c'est d'être disponible à vivre une expérience sincère avec toi-même.",
+  },
+  {
+    q: "Puis-je venir seul(e) ?",
+    r: "Oui. MERAKI est pensé comme un espace où l'on peut venir tel que l'on est, sans avoir besoin de connaître quelqu'un à l'avance.",
+  },
+  {
+    q: "Comment savoir si cette immersion est juste pour moi ?",
+    r: "Si tu sens qu'un passage est là, que tu as besoin de souffler, de revenir à toi et d'y voir plus clair, alors MERAKI peut être un espace profondément juste pour toi.",
+  },
+  {
+    q: "Y a-t-il un nombre de places limité ?",
+    r: "Oui. L'immersion se vit en petit groupe pour préserver la qualité de présence, d'écoute et d'accompagnement.",
+  },
+  {
+    q: "Que se passe-t-il si je dois annuler ?",
+    r: "L'annulation est possible jusqu'à 40 jours avant l'événement, hors commission de la plateforme. Les modalités détaillées sont précisées sur Billetweb au moment de la réservation.",
+  },
+];
+---
+
+<section id="faq">
+  <div class="mb-8">
+    <span class="text-xs uppercase tracking-widest font-semibold block mb-2" style="color: #cfbb99;">
+      FAQ
+    </span>
+    <h2 class="text-3xl md:text-4xl tracking-tight" style="font-family: 'Playfair Display', serif;">
+      Questions fréquentes
+    </h2>
+    <p class="text-sm font-light leading-relaxed mt-3 max-w-2xl" style="color: #e9dcc8;">
+      Une expérience intérieure mérite aussi un cadre clair. Voici les réponses aux questions les plus fréquentes.
+    </p>
+  </div>
+  <div class="flex flex-col gap-3">
+    {questions.map(({ q, r }) => (
+      <details
+        class="rounded-2xl border overflow-hidden border-white/10"
+        style="background: rgba(255,255,255,0.05);"
+      >
+        <summary class="px-6 py-4 text-sm font-medium cursor-pointer flex items-center justify-between list-none">
+          {q}
+          <iconify-icon
+            icon="solar:alt-arrow-down-linear"
+            width="16"
+            style="color: #cfbb99;"
+            stroke-width="1.5"
+          ></iconify-icon>
+        </summary>
+        <p class="px-6 pb-4 text-sm font-light leading-relaxed" style="color: #e9dcc8;">{r}</p>
+      </details>
+    ))}
+  </div>
+</section>
