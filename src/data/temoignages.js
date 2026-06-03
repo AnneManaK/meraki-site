@@ -9,7 +9,7 @@ export const temoignages = [
   },
   {
     nom: 'Pierre',
-    citation: 'Une délivrance',
+    citation: 'Une vraie libération',
     photo: '/imagepierre.webp',
     video: `${BASE}/Tem_Pierre.mp4`,
   },
@@ -27,13 +27,13 @@ export const temoignages = [
   },
   {
     nom: 'Alexandra',
-    citation: 'Une évolution immense',
+    citation: 'Un tournant dans ma vie',
     photo: '/imagealexandra.webp',
     video: `${BASE}/Tem_Alex.mp4`,
   },
   {
     nom: 'Jean-Charles',
-    citation: 'Un miracle inattendu',
+    citation: 'Un vrai déclic',
     photo: '/imagejcharles.webp',
     video: `${BASE}/temoignage1.mp4`,
   },
