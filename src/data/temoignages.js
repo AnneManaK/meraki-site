@@ -1,4 +1,4 @@
-const BASE = 'https://meraki.manakairos.com';
+const BASE = 'https://media.manakairos.com';
 
 export const temoignages = [
   {
