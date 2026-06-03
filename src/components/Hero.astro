@@ -3,15 +3,17 @@ import { sessions, billetwebUrl } from '../data/sessions.js';
 ---
 
 <header
-  class="relative rounded-3xl p-10 md:p-16 overflow-hidden border min-h-[70vh] flex items-center border-white/10"
+  class="relative rounded-3xl p-10 md:p-16 overflow-hidden border border-white/10"
   style="background: rgba(255,255,255,0.04); box-shadow: 0 14px 36px rgba(0,0,0,0.24);"
 >
   <div class="bg-gradient-to-br via-transparent to-transparent z-0 absolute top-0 right-0 bottom-0 left-0 from-white/5"></div>
   <div class="absolute -top-32 -right-32 w-80 h-80 rounded-full blur-3xl opacity-20" style="background: #cfbb99;"></div>
   <div class="absolute -bottom-32 -left-32 w-80 h-80 rounded-full blur-3xl opacity-10" style="background: #ffffff;"></div>
 
-  <div class="relative z-10 grid grid-cols-1 lg:grid-cols-5 gap-10 items-start w-full">
-    <div class="lg:col-span-3 flex flex-col gap-5">
+  <div class="relative z-10 flex flex-col gap-8">
+
+    <!-- Titre + texte pleine largeur -->
+    <div class="flex flex-col gap-5">
       <div
         class="inline-flex items-center gap-2 px-3 py-1 rounded-full border w-fit border-white/15"
         style="background: rgba(255,255,255,0.06);"
@@ -35,62 +37,61 @@ import { sessions, billetwebUrl } from '../data/sessions.js';
         </span>
       </h1>
 
-      <p class="text-sm md:text-base font-light leading-relaxed max-w-lg" style="color: #e9dcc8;">
+      <p class="text-sm md:text-base font-light leading-relaxed max-w-2xl" style="color: #e9dcc8;">
         MERAKI est une immersion en petit groupe pour celles et ceux qui sentent qu'un changement est nécessaire, mais qui tournent encore autour.
         Pendant 4 jours, tu ralentis assez pour voir clair, poser une décision, et remettre du mouvement là où ta vie personnelle ne peut plus continuer comme avant.
       </p>
-
-      <div class="flex flex-wrap gap-3 mt-4">
-        <a
-          class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-xs font-medium tracking-wide uppercase transition-all hover:opacity-90"
-          style="background: #cfbb99; color: #111; box-shadow: 0 10px 24px rgba(0,0,0,0.18);"
-          href={billetwebUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Je réserve ma place
-          <iconify-icon icon="solar:arrow-right-linear" width="16" stroke-width="1.5"></iconify-icon>
-        </a>
-        <a
-          class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-xs font-medium tracking-wide uppercase border transition-all border-white/20 text-white hover:bg-white/5"
-          href="#infos"
-        >
-          Voir les infos pratiques
-        </a>
-      </div>
     </div>
 
-    <aside
-      class="lg:col-span-2 rounded-2xl p-6 border border-white/10"
+    <!-- Encart dates : 2 colonnes côte à côte -->
+    <div
+      class="rounded-2xl p-6 border border-white/10"
       style="background: rgba(255,255,255,0.06); box-shadow: 0 8px 24px rgba(0,0,0,0.12);"
     >
-      <h3 class="text-lg tracking-tight mb-4" style="font-family: 'Playfair Display', serif;">
+      <h3 class="text-sm uppercase tracking-widest font-semibold mb-4" style="color: #cfbb99;">
         Les prochaines immersions
       </h3>
-
-      {sessions.map((s, i) => (
-        <div class={i > 0 ? 'pt-4' : 'pb-4 border-b border-white/10'}>
-          <strong class={`text-sm font-medium block mb-1${!s.active ? ' opacity-70' : ''}`}>
-            {s.dates}
-          </strong>
-          <div class="flex items-center gap-3 flex-wrap">
-            <div class="text-sm font-light" style="color: #e9dcc8;">{s.lieu}</div>
-            <span
-              class="px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-semibold"
-              style={s.badgeStyle}
-            >
-              {s.badge}
-            </span>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {sessions.map((s) => (
+          <div class="flex flex-col gap-1">
+            <strong class={`text-sm font-medium${!s.active ? ' opacity-70' : ''}`}>{s.dates}</strong>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="text-sm font-light" style="color: #e9dcc8;">{s.lieu}</span>
+              <span
+                class="px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-semibold"
+                style={s.badgeStyle}
+              >
+                {s.badge}
+              </span>
+            </div>
+            <small class="text-xs font-light" style="color: rgba(233,220,200,0.6);">{s.format}</small>
           </div>
-          <small class="text-xs font-light" style="color: rgba(233,220,200,0.6);">
-            {s.format}
-          </small>
-        </div>
-      ))}
-
+        ))}
+      </div>
       <p class="mt-4 text-xs font-light" style="color: rgba(233,220,200,0.6);">
         Petit groupe · Places limitées · Réservation via Billetweb
       </p>
-    </aside>
+    </div>
+
+    <!-- CTAs -->
+    <div class="flex flex-wrap gap-3">
+      <a
+        class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-xs font-medium tracking-wide uppercase transition-all hover:opacity-90"
+        style="background: #cfbb99; color: #111; box-shadow: 0 10px 24px rgba(0,0,0,0.18);"
+        href={billetwebUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Je réserve ma place
+        <iconify-icon icon="solar:arrow-right-linear" width="16" stroke-width="1.5"></iconify-icon>
+      </a>
+      <a
+        class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-xs font-medium tracking-wide uppercase border transition-all border-white/20 text-white hover:bg-white/5"
+        href="#infos"
+      >
+        Voir les infos pratiques
+      </a>
+    </div>
+
   </div>
 </header>
