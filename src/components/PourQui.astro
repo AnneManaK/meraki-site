@@ -15,7 +15,7 @@
     </p>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
     <div
       class="rounded-2xl p-6 border border-white/10"
       style="background: rgba(255,255,255,0.05); box-shadow: 0 8px 24px rgba(0,0,0,0.12);"
@@ -50,21 +50,23 @@
         <li class="flex gap-2"><span style="color: rgba(233,220,200,0.4);">·</span>Tu préfères rester dans le mental sans t'impliquer dans ce que l'expérience pourrait faire bouger.</li>
       </ul>
     </div>
+  </div>
 
-    <div
-      class="rounded-2xl p-6 border border-white/10"
-      style="background: rgba(255,255,255,0.08); box-shadow: 0 8px 24px rgba(0,0,0,0.12);"
-    >
-      <div class="flex items-center gap-2 mb-4">
-        <iconify-icon icon="solar:star-linear" width="18" style="color: #cfbb99;" stroke-width="1.5"></iconify-icon>
-        <h3 class="text-base font-medium">À la sortie de MERAKI tu repars avec :</h3>
-      </div>
-      <ul class="space-y-3 text-sm font-light" style="color: #e9dcc8;">
-        <li class="flex gap-2"><span style="color: #cfbb99;">·</span>Une clarté sur ce qui doit changer.</li>
-        <li class="flex gap-2"><span style="color: #cfbb99;">·</span>Une décision assumée pour avancer.</li>
-        <li class="flex gap-2"><span style="color: #cfbb99;">·</span>Un premier plan d'action concret pour remettre du mouvement.</li>
-        <li class="flex gap-2"><span style="color: #cfbb99;">·</span>L'élan pour passer à l'acte et reprendre ta place.</li>
-      </ul>
+  <div class="rounded-2xl p-6 mt-5 border border-white/10" style="background: rgba(207,187,153,0.06);">
+    <p class="text-xs uppercase tracking-widest font-semibold mb-4" style="color: #cfbb99;">
+      À la sortie de MERAKI, tu repars avec
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      {[
+        'Une clarté sur ce qui doit changer.',
+        'Une décision assumée pour avancer.',
+        'Un premier plan d\'action concret pour remettre du mouvement.',
+        'L\'élan pour passer à l\'acte et reprendre ta place.',
+      ].map((item) => (
+        <p class="text-base font-light italic leading-relaxed" style="font-family: 'Playfair Display', serif; color: #e9dcc8;">
+          « {item} »
+        </p>
+      ))}
     </div>
   </div>
 </section>
