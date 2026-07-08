@@ -34,6 +34,26 @@ export async function onRequestPost(context) {
     });
 
     if (res.ok || res.status === 204) {
+      await fetch('https://api.brevo.com/v3/smtp/email', {
+        method: 'POST',
+        headers: {
+          'api-key': env.BREVO_API_KEY,
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          sender: { name: 'MERAKI', email: 'sublimerlinstant@gmail.com' },
+          to: [{ email: 'sublimerlinstant@gmail.com' }],
+          subject: '✨ Nouvelle pré-inscription MERAKI',
+          htmlContent: `<p>Nouvelle pré-inscription reçue :</p>
+            <ul>
+              <li><strong>Prénom :</strong> ${prenom || '—'}</li>
+              <li><strong>Email :</strong> ${email}</li>
+              <li><strong>Session :</strong> ${session || '—'}</li>
+            </ul>`,
+        }),
+      }).catch(() => {});
+
       return new Response(JSON.stringify({ success: true }), { headers });
     }
 
