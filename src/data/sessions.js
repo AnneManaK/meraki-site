@@ -1,19 +1,19 @@
 export const sessions = [
   {
-    dates: '25 au 28 juin 2026',
-    lieu: 'Saint-Poix, Mayenne',
-    format: '4 jours / 3 nuits en pleine nature',
-    badge: 'COMPLET',
-    badgeStyle: 'background:#cfbb99; color:#111; box-shadow:0 4px 12px rgba(0,0,0,0.18);',
-    active: false,
+    dates: '28 au 31 janvier 2027',
+    lieu: 'À définir',
+    format: '4 jours / 3 nuits en immersion',
+    badge: 'PRÉ-INSCRIPTION',
+    badgeStyle: 'background: rgba(207,187,153,0.2); color:#cfbb99; border:1px solid rgba(207,187,153,0.4);',
+    active: true,
   },
   {
-    dates: '29 octobre au 1er novembre 2026',
-    lieu: 'Bannes, Mayenne',
-    format: "4 jours / 3 nuits dans un écrin de douceur",
-    badge: 'COMPLET',
-    badgeStyle: 'background:#cfbb99; color:#111; box-shadow:0 4px 12px rgba(0,0,0,0.18);',
-    active: false,
+    dates: '1 au 4 avril 2027',
+    lieu: 'À définir',
+    format: '4 jours / 3 nuits en immersion',
+    badge: 'PRÉ-INSCRIPTION',
+    badgeStyle: 'background: rgba(207,187,153,0.2); color:#cfbb99; border:1px solid rgba(207,187,153,0.4);',
+    active: true,
   },
 ];
 

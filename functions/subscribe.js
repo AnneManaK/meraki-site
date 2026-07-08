@@ -7,10 +7,20 @@ export async function onRequestPost(context) {
   };
 
   try {
-    const { email } = await request.json();
+    const { email, session } = await request.json();
 
     if (!email || !email.includes('@')) {
       return new Response(JSON.stringify({ error: 'Email invalide' }), { status: 400, headers });
+    }
+
+    const body = {
+      email,
+      listIds: [3],
+      updateEnabled: true,
+    };
+
+    if (session) {
+      body.attributes = { MERAKI_SESSION: session };
     }
 
     const res = await fetch('https://api.brevo.com/v3/contacts', {
@@ -20,11 +30,7 @@ export async function onRequestPost(context) {
         'Content-Type': 'application/json',
         Accept: 'application/json',
       },
-      body: JSON.stringify({
-        email,
-        listIds: [3],
-        updateEnabled: true,
-      }),
+      body: JSON.stringify(body),
     });
 
     if (res.ok || res.status === 204) {
