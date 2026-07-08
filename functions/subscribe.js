@@ -42,7 +42,7 @@ export async function onRequestPost(context) {
           Accept: 'application/json',
         },
         body: JSON.stringify({
-          sender: { name: 'MERAKI', email: 'contact@meraki.manakairos.com' },
+          sender: { name: 'MERAKI', email: 'contact@annechevallier.fr' },
           to: [{ email: 'sublimerlinstant@gmail.com' }],
           replyTo: { email: 'sublimerlinstant@gmail.com' },
           subject: '✨ Nouvelle pré-inscription MERAKI',
