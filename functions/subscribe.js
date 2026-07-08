@@ -42,8 +42,9 @@ export async function onRequestPost(context) {
           Accept: 'application/json',
         },
         body: JSON.stringify({
-          sender: { name: 'MERAKI', email: 'sublimerlinstant@gmail.com' },
+          sender: { name: 'MERAKI', email: 'contact@meraki.manakairos.com' },
           to: [{ email: 'sublimerlinstant@gmail.com' }],
+          replyTo: { email: 'sublimerlinstant@gmail.com' },
           subject: '✨ Nouvelle pré-inscription MERAKI',
           htmlContent: `<p>Nouvelle pré-inscription reçue :</p>
             <ul>
